@@ -1,7 +1,7 @@
 import time
 import sys
 
-def main():
+def main_branch():
     time.sleep(2)
     print("You awaken, feeling dizzy, in what appears to be a small room with wooden walls. After a few moments, you begin to feel a sharp, throbbing pain in your head...")
     time.sleep(1)
@@ -10,7 +10,5 @@ def main():
 
 
 
-
-
 if __name__ == "__main__":
-    main()
+    main_branch()
