@@ -19,10 +19,50 @@ def main_branch():
 
 def first(first_attempt):
     if first_attempt == "blade":
+        time.sleep(2)
+        print("You proceed to shuffle, slowly and quietly, in your chair, over to the the blade, and grab it with what little reach you have from behind.")
+        add_item("Tanto")
+        print("(A Tanto has been added to your inventory)")
+        time.sleep(2)
+        print("After hiding the blade, you begin to hear the voices outside approaching more closely, until one of the mysteriosu figures opens the paper door...")
+        time.sleep(2)
+        print("Three, slim, masekd men step through the threshold into the room and face you...")
         time.sleep(1)
+        print("You feel the urge to question them on their whereabouts, but the one directly in front of you proceeds to speak:")
+        time.sleep(1)
+        print("'Helpless soldier of war, there is nothing that needs to be explained, other than the matter of your execution...'")
+        time.sleep(2)
+        print("You say: 'I was captured? How is this so? I don't remember ever being caught...'")
+        time.sleep(2)
+        print("They say: 'You have dishonoured your family and your emperor, it is death by seppuku.'")
+        time.sleep(2)
+        print("You are angered by this statement, you never believed this would be a way to die. For what? You saved the others, but your actions came at the cost of your honour?")
+        time.sleep(3)
+        second = input("If you choose to use the Tanto to break out, say (break).\n If you choose to wait and see what happens next, say (stay).")
+        if second == "break":
+            time.sleep(2)
+
+        if second == "stay":
+            time.sleep(2)
 
     if first_attempt == "wait":
+        time.sleep(2)
+        print("After a few moments, three, slim, masekd men step through the threshold into the room and face you...")
         time.sleep(1)
+        print("You feel the urge to question them on their whereabouts, but the one directly in front of you proceeds to speak:")
+        time.sleep(1)
+        print("'Helpless soldier of war, there is nothing that needs to be explained, other than the matter of your execution...'")
+        time.sleep(2)
+        print("You say: 'I was captured? How is this so? I don't remember ever being caught...'")
+        time.sleep(2)
+        print("They say: 'You have dishonoured your family and your emperor, it is death by seppuku.'")
+        time.sleep(2)
+        print("You are angered by this statement, you never believed this would be a way to die. For what? You saved the others, but your actions came at the cost of your honour?")
+        time.sleep(3)
+
+
+
+
 
 
 if __name__ == "__main__":
