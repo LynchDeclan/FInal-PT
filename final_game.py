@@ -39,14 +39,10 @@ def first(first_attempt):
         print("You are angered by this statement, you never believed this would be a way to die. For what? You saved the others, but your actions came at the cost of your honour?")
         time.sleep(3)
         second = input("If you choose to use the Tanto to break out, say (break).\n If you choose to wait and see what happens next, say (stay).")
-        if second == "break":
-            time.sleep(2)
-
-        if second == "stay":
-            time.sleep(2)
+        break_attempt(second)
 
     if first_attempt == "wait":
-        doors = ["room 1", "room 2", "room 3", "room 4", "room 5", "room 6", "room 7", "room 8",]
+        door_list = ["room 1", "room 2", "room 3", "room 4", "room 5", "room 6", "room 7", "room 8",]
         time.sleep(2)
         print("After a few moments, three, slim, masekd men step through the threshold into the room and face you...")
         time.sleep(1)
@@ -72,12 +68,40 @@ def first(first_attempt):
             print("You see a large door at the end of the corridor, but the corridor is also lined with smaller doors...")
             time.sleep(2)
             choose_door = input("Do you attempt to run to the door at the end? Or do you choose to go through one of the many doors lining the walls? (main door/wall door)")
-            if choose_door == "main door":
-                time.sleep(2)
+            doors(door_list)
 
-            if choose_door == "wall door":
-                time.sleep(2)
-                print("")
+        if get_out == "no":
+            time.sleep(2)
+
+
+def break_attempt(second):
+    if second == "break":
+        time.sleep(2)
+
+    if second == "stay":
+        time.sleep(2)
+
+def doors(door_list):       
+    if choose_door == "main door":
+        time.sleep(2)
+        print("You bolt down the centre of the corridor, with hopes of finding freedom beyond the large door in front of your eyes.")
+
+    if choose_door == "wall door":
+        time.sleep(2)
+        for door in door_list:
+            time.sleep(1)
+            print(door)
+        time.sleep(2)
+        choose_door = input("Which door do you choose to go through?:")
+        door_choices(choose_door)
+
+def door_choices(choose_door):
+    if choose_door == "room 1":
+        time.sleep(2)
+
+
+
+
         
 
 
