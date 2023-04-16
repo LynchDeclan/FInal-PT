@@ -46,6 +46,7 @@ def first(first_attempt):
             time.sleep(2)
 
     if first_attempt == "wait":
+        doors = ["room 1", "room 2", "room 3", "room 4", "room 5", "room 6", "room 7", "room 8",]
         time.sleep(2)
         print("After a few moments, three, slim, masekd men step through the threshold into the room and face you...")
         time.sleep(1)
@@ -59,7 +60,25 @@ def first(first_attempt):
         time.sleep(2)
         print("You are angered by this statement, you never believed this would be a way to die. For what? You saved the others, but your actions came at the cost of your honour?")
         time.sleep(3)
+        print("The masked man speaks again: 'You know that there is only one way to regain your honour...' He gestures towards the Tanto on the shelf.")
+        time.sleep(2)
+        get_out = input("You knoew that what binds you to the chair feels quite weak, do you attempt to force your way out? (yes/no)")
+        if get_out == "yes":
+            time.sleep(2)
+            print("After a brief silence, in front of the eyes of the masked men, you suddenly twist your body to forcefully break out of the binds.")
+            time.sleep(1)
+            print("Your attempt is successful, and your binds are broken. In a flash, you take all the masked men off their feet and exit the room into a large corridor.")
+            time.sleep(2)
+            print("You see a large door at the end of the corridor, but the corridor is also lined with smaller doors...")
+            time.sleep(2)
+            choose_door = input("Do you attempt to run to the door at the end? Or do you choose to go through one of the many doors lining the walls? (main door/wall door)")
+            if choose_door == "main door":
+                time.sleep(2)
 
+            if choose_door == "wall door":
+                time.sleep(2)
+                print("")
+        
 
 
 
