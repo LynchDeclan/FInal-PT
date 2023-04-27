@@ -2,6 +2,8 @@ import time
 import sys
 
 inventory = []
+
+
 def add_item(item):
     inventory.append(item)
     print(f"You have picked up {item}.")
@@ -54,6 +56,11 @@ def first(first_attempt):
             time.sleep(2)
             print("You reaslise that the Tanto was there for your sepukku ritual...")
             time.sleep(2)
+            print("But you still have it in your hands...")
+            time.sleep(2)
+            print("In a flash, the masked man rips you out of your binds and puts heavy chains on your hands.")
+            time.sleep(2)
+            print("")
 
 
     if first_attempt == "wait":
