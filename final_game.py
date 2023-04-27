@@ -206,12 +206,17 @@ def first(first_attempt):
             time.sleep(2)
             print("The masked men untie you and proceed to lead you out of the room.")
             time.sleep(2)
-            print("The move towards a large door at the end of the corridor.")
+            print("They move towards a large door at the end of the corridor.")
             time.sleep(2)
-            print("")
+            print("You notice ")
 
 def stone_cave():
     time.sleep(2)
+    print("You look up, and notice a gigantic stone beast staring directly at you. Red eyes glowing...")
+    time.sleep(2)
+    print("(You can display your inventory to equip weapons)")
+    time.sleep(2)
+    show_inventory = input("Display your inventory? (yes/no)\n")
     
 
 def doors(door_list, choose_door):       
