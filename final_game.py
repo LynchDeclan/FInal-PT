@@ -210,6 +210,9 @@ def first(first_attempt):
             time.sleep(2)
             print("")
 
+def stone_cave():
+    time.sleep(2)
+    
 
 def doors(door_list, choose_door):       
     if choose_door == "main door":
