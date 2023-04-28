@@ -119,7 +119,7 @@ def first(first_attempt):
                 print("You dive downinto the trees, and enter a tunnel in the ground, falling faster and faster, you then enter a chasm with glowing silver walls, until you hit the water...")
                 time.sleep(2)
                 print("But there are no depths, and, as if you have entered a magical portal, you suddenly smash through wooden beams and finally collide with the ground of a stone cave...")
-
+                stone_cave()
 
 
             if kill_or_not == "call":
@@ -170,7 +170,7 @@ def first(first_attempt):
                 print("You dive downinto the trees, and enter a tunnel in the ground, falling faster and faster, you then enter a chasm with glowing silver walls, until you hit the water...")
                 time.sleep(2)
                 print("But there are no depths, and, as if you have entered a magical portal, you suddenly smash through wooden beams and finally collide with the ground of a stone cave...")
-
+                stone_cave()
 
 
     if first_attempt == "wait":
@@ -217,6 +217,66 @@ def stone_cave():
     print("(You can display your inventory to equip weapons)")
     time.sleep(2)
     show_inventory = input("Display your inventory? (yes/no)\n")
+    if show_inventory == "yes":
+        time.sleep(2)
+        for item in inventory:
+            time.sleep(1)
+            print(item)
+        time.sleep(2)
+        choose_weapon = input("Which weapon do you choose? (sword/tanto)\n")
+        if choose_weapon == "tanto":
+            time.sleep(2)
+            print("Suddenly, the beast growls and abruptly attacks by thrusting its large spear in your direction.")
+            time.sleep(2)
+            print("With your skills, you manage to parry the heavy spear with your Tanto, and the spear gets stuck in the ground.")
+            time.sleep(2)
+            print("But a sudden direct blow with the spear from a swing is too heavy for the Tanto, and you get choppoed in hald...")
+            time.sleep(3)
+            sys.exit()
+        
+        if choose_weapon == "sword":
+            time.sleep(2)
+            print("The sword glows a bright blue when unsheathed, and you notice that one of the eyes of the beast has a keyhol-like shape in the center...")
+            time.sleep(2)
+            print("You let the Stormwalker Key slide out of the hilt and hold it tightly in your hand.")
+            time.sleep(2)
+            print("Suddenly, the beast growls and abruptly attacks by thrusting its large spear in your direction.")
+            time.sleep(2)
+            print("You manage to parry the heavy blow by sidestepping and causing the spear to bounce off of your sword and get stuck in the ground")
+            time.sleep(2)
+            print("You quickly run up the spear and onto the beast's body, heading for its face with the key in your hand.")
+            time.sleep(2)
+            print("As the beast pulls out the spear and violently reels back, you fly up into the air, but your path stays the same, you thrust the key into the eye of the beast and, wth force, twist it to the right.")
+            time.sleep(2)
+            print("The beast's upper body starts to crack and collapse. As it hits the ground, it's face splits in two, revealing the inside of it's head...")
+            time.sleep(2)
+            print("All around the inside, you see different coloured keys with the same design, engraved into the walls of the beast's head...")
+            time.sleep(2)
+            print("As you collect each of the keys, enormous double-doors start to materialise on the wall behind you...")
+            time.sleep(1)
+            add_item("Blue Stormwalker Key")
+            print("Blue stormwalker key added to your inventory")
+            time.sleep(1)
+            add_item("Red Stormwalker Key")
+            print("Red stormwalker key added to your inventory")
+            time.sleep(1)
+            add_item("Indigo Stormwalker Key")
+            print("Indigo stormwalker key added to your inventory")
+            time.sleep(1)
+            add_item("Crystalline Stormwalker Key")
+            print("Crystalline stormwalker key added to your inventory")
+            time.sleep(3)
+            print("You notice the four keyholes on the doors, but you also turn and see the small tunnel that leads to light...")
+            two_exits()
+
+
+    if show_inventory == "no":
+        time.sleep(2)
+        print("Suddenly, you hear a thunderous roar from the beast, and you look down just in time to notice the gigantic spear that it thrusts in your direction, impaling you with it. ")
+        time.sleep(2)
+        print("You look up with the last ounce of your strength, and notice the glowing red eyes of the beast, staring as you fall off the spear and bleed to death...")
+        time.sleep(3)
+        sys.exit()
     
 
 def doors(door_list, choose_door):       
@@ -279,7 +339,7 @@ def door_choices(choose_door):
             time.sleep(2)
             print("You notice that the hilt is hollow, and something falls out, what looks like a silver, ancient key, but unnaturally large...")
             time.sleep(2)
-            print("You look up at the beast, staring at you intently, as your body quivers in fear.")
+            print("You look up at the beast, staring at you intently, as your body quivers in fear...")
             time.sleep(2)
             print("Then you notice it. One of the beast's red eyes has a darkness in the center, shaped like a large keyhole...")
             time.sleep(2)
@@ -316,9 +376,8 @@ def door_choices(choose_door):
             time.sleep(3)
             print("You notice the four keyholes on the doors, but you also turn and see the small tunnel that leads to light...")
             time.sleep(2)
-            which_exit = input("Do you choose to go through the large doors or the small tunnel in hopes of finding an exit? (large doors/small tunnel)\n")
-            two_exits(which_exit)
-            
+            two_exits()
+
         if sword_or_run == "Run":
             time.sleep(2)
             print("You think quickly and attempt to run through the legs of the beast, and towarda the light through the tight tunnel that lies ahead.")
@@ -331,6 +390,7 @@ def door_choices(choose_door):
     
     if choose_door == "room 2":
         time.sleep(2)
+        
 
     if choose_door == "room 3":
         time.sleep(2)
@@ -352,8 +412,9 @@ def door_choices(choose_door):
         time.sleep(2)
         sys.exit()
 
-def two_exits(which_exit):
+def two_exits():
     time.sleep(2)
+    which_exit = input("Do you choose to go through the large doors or the small tunnel in hopes of finding an exit? (large doors/small tunnel)\n")
 
 
 
