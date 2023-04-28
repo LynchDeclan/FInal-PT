@@ -208,7 +208,30 @@ def first(first_attempt):
             time.sleep(2)
             print("They move towards a large door at the end of the corridor.")
             time.sleep(2)
-            print("You notice ")
+            corridor_escape = input("You notice all the other doors lining the corridor, do you wish to escape into one of them? (yes/no)\n")
+            if corridor_escape == "yes":
+                time.sleep(2)
+                for door in door_list:
+                    time.sleep(1)
+                    print(door)
+                time.sleep(2)
+                choose_door = input("Which door do you choose to escape through?:\n")
+                door_choices(choose_door)
+
+            if corridor_escape == "no":
+                time.sleep(2)
+                print("The masked men unlock thr large wooden doors at the end of the corridor, and open it. You feel a large gust of wind on you face and hear the rustling of leaves.")
+                time.sleep(2)
+                print("What lies before you is a very large bacony that protrudes from the tall cliff on which, you see, the large, castle-like structre is built upon.")
+                time.sleep(2)
+                print("You are sat down amongst dishonoured samurai just like youself, and ahead you notice the shogun, overlooking the ceremony.")
+                time.sleep(2)
+                print("You knew that your execution was inevitable, and, in the short moments that follow, you plunge the tanto blade deep in your stomach, and forcefully bring it sideways...")
+                time.sleep(2)
+                print("In agony, you fall to the floor, knowing that you wrre nothing but a slave to your honour...")
+                time.sleep(3)
+                sys.exit()
+
 
 def stone_cave():
     time.sleep(2)
@@ -302,7 +325,7 @@ def doors(door_list, choose_door):
             time.sleep(1)
             print(door)
         time.sleep(2)
-        choose_door = input("Which door do you choose to go through?:\n")
+        choose_door = input("Which door do you choose to escape through?:\n")
         door_choices(choose_door)
 
 def door_choices(choose_door):
@@ -390,7 +413,7 @@ def door_choices(choose_door):
     
     if choose_door == "room 2":
         time.sleep(2)
-        
+
 
     if choose_door == "room 3":
         time.sleep(2)
@@ -415,13 +438,6 @@ def door_choices(choose_door):
 def two_exits():
     time.sleep(2)
     which_exit = input("Do you choose to go through the large doors or the small tunnel in hopes of finding an exit? (large doors/small tunnel)\n")
-
-
-
-
-        
-
-
 
 
 
