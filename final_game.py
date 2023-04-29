@@ -1,5 +1,6 @@
 import time
 import sys
+import os
 
 inventory = []
 
@@ -17,6 +18,7 @@ def main_branch():
     print("You hear people arguing angrily on the other side of the rice paper doors to your right, and a small tanto blade on the shelf to your left... ")
     time.sleep(2)
     first_attempt = input("Do you attempt to escape using the blade? Or do you wait for the people outside to enter? (blade/wait)\n")
+    os.system('cls')
     first(first_attempt)
 
 def first(first_attempt):
@@ -48,6 +50,7 @@ def first(first_attempt):
             print("You see a large door at the end of the corridor, but the corridor is also lined with smaller doors...")
             time.sleep(2)
             choose_door = input("Do you attempt to run to the door at the end? Or do you choose to go through one of the many doors lining the walls? Hurry, the masked men will attemp to pursue you. (main door/wall door)\n")
+            os.system('cls')
             doors(door_list, choose_door)
 
         if break_out == "stay":
@@ -71,6 +74,7 @@ def first(first_attempt):
             print("You still have the Tanto blade concealed in your garnments from earlier, you managed to hide it from the masked men successfully...")
             time.sleep(2)
             kill_or_not = input("Do you find the old man a threat and kill him silently? Or do you call out to him? (kill/call)\n")
+            os.system('cls')
             if kill_or_not == "kill":
                 time.sleep(2)
                 print("In a poised position, you suddenly lunge at the man, in hopes of disarming and killing him.")
@@ -119,6 +123,7 @@ def first(first_attempt):
                 print("You dive downinto the trees, and enter a tunnel in the ground, falling faster and faster, you then enter a chasm with glowing silver walls, until you hit the water...")
                 time.sleep(2)
                 print("But there are no depths, and, as if you have entered a magical portal, you suddenly smash through wooden beams and finally collide with the ground of a stone cave...")
+                os.system('cls')
                 stone_cave()
 
 
@@ -170,6 +175,7 @@ def first(first_attempt):
                 print("You dive downinto the trees, and enter a tunnel in the ground, falling faster and faster, you then enter a chasm with glowing silver walls, until you hit the water...")
                 time.sleep(2)
                 print("But there are no depths, and, as if you have entered a magical portal, you suddenly smash through wooden beams and finally collide with the ground of a stone cave...")
+                os.system('cls')
                 stone_cave()
 
 
@@ -191,6 +197,7 @@ def first(first_attempt):
         print("The masked man speaks again: 'You know that there is only one way to regain your honour...' He gestures towards the Tanto on the shelf.")
         time.sleep(2)
         get_out = input("You know that what binds you to the chair feels quite weak, do you attempt to force your way out? (yes/no)\n")
+        os.system('cls')
         if get_out == "yes":
             time.sleep(2)
             print("After a brief silence, in front of the eyes of the masked men, you suddenly twist your body to forcefully break out of the binds.")
@@ -200,6 +207,7 @@ def first(first_attempt):
             print("You see a large door at the end of the corridor, but the corridor is also lined with smaller doors...")
             time.sleep(2)
             choose_door = input("Do you attempt to run to the door at the end? Or do you choose to go through one of the many doors lining the walls? Hurry, the masked men will attemp to pursue you. (main door/wall door)\n")
+            os.system('cls')
             doors(door_list, choose_door)
             
         if get_out == "no":
@@ -216,6 +224,7 @@ def first(first_attempt):
                     print(door)
                 time.sleep(2)
                 choose_door = input("Which door do you choose to escape through?:\n")
+                os.system('cls')
                 door_choices(choose_door)
 
             if corridor_escape == "no":
@@ -247,6 +256,7 @@ def stone_cave():
             print(item)
         time.sleep(2)
         choose_weapon = input("Which weapon do you choose? (sword/tanto)\n")
+        os.system('cls')
         if choose_weapon == "tanto":
             time.sleep(2)
             print("Suddenly, the beast growls and abruptly attacks by thrusting its large spear in your direction.")
@@ -290,6 +300,7 @@ def stone_cave():
             print("Crystalline stormwalker key added to your inventory")
             time.sleep(3)
             print("You notice the five keyholes on the doors, but you also turn and see the small tunnel that leads to light...")
+            os.system('cls')
             two_exits()
 
 
@@ -326,6 +337,7 @@ def doors(door_list, choose_door):
             print(door)
         time.sleep(2)
         choose_door = input("Which door do you choose to escape through?:\n")
+        os.system('cls')
         door_choices(choose_door)
 
 def door_choices(choose_door):
@@ -353,6 +365,7 @@ def door_choices(choose_door):
         print("There is a light ahead of you. An exit, perhaps, but blocked by a gigantic stone beast that locks its gaze onto you.")
         time.sleep(2)
         sword_or_run = input("Do you choose to take a sword from one of the dead samurai? Or do you choose to run through the danger ahead? (sword/run)\n")
+        os.system('cls')
         if sword_or_run == "sword":
             time.sleep(2)
             print("You take the sword in your hands, it feels almost familiar to the weapon which you once owned, but it feel much heavier, and the design, you notice, is slightly abonormal...")
@@ -399,6 +412,7 @@ def door_choices(choose_door):
             time.sleep(3)
             print("You notice the four keyholes on the doors, but you also turn and see the small tunnel that leads to light...")
             time.sleep(2)
+            os.system('cls')
             two_exits()
 
         if sword_or_run == "Run":
@@ -446,6 +460,7 @@ def door_choices(choose_door):
         print("The scroll above the pedestal, you notice, now reads: 'The one who is worthy of Sutōmuu~ōkā's heart'")
         time.sleep(2)
         worthy_choice = input("You find that a blue tanto blade has also materialised on your side. What do you choose? Fighting them with the sword, the tanto, or nothing? (sword/tanto/none)\n")
+        os.system('cls')
         if worthy_choice == "sword":
             time.sleep(2)
             print("You hold up your Stormwalker Sword in a flurry of blue lighting, and every single sword in the room charges from all directions.")
@@ -570,6 +585,7 @@ def two_exits():
         print("The scroll above the pedestal, you notice, now reads: 'The one who is worthy of Sutōmuu~ōkā's heart'")
         time.sleep(2)
         worthy_choice=input("You find that a blue tanto blade has also materialised on your side. What do you choose? Fighting them with the sword, the tanto, or nothing? (sword/tanto/none)\n")
+        os.system('cls')
         if worthy_choice == "sword":
             time.sleep(2)
             print("You hold up your Stormwalker Sword in a flurry of blue lighting, and every single sword in the room charges from all directions.")
