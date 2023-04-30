@@ -4,7 +4,6 @@ import os
 
 inventory = []
 
-
 def add_item(item):
     inventory.append(item)
     print(f"You have picked up {item}.")
