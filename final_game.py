@@ -3,6 +3,7 @@ import sys
 import os
 
 inventory = []
+door_list = ["room 1", "room 2", "room 3", "room 4"]
 
 def add_item(item):
     inventory.append(item)
@@ -42,6 +43,7 @@ def first(first_attempt):
         print("You are angered by this statement, you never believed this would be a way to die. For what? You saved the others, but your actions came at the cost of your honour?")
         time.sleep(3)
         break_out = input("If you choose to use the Tanto to break out, say (break). If you choose to wait and see what happens next, say (stay).\n")
+        os.system('cls')
         if break_out == "break":
             time.sleep(2)
             print("Your attempt is successful, and your binds are broken. In a flash, you manage to slit the throat of who appears to be the leader of the masked men and run out of the room into a large corridor.")
@@ -179,7 +181,6 @@ def first(first_attempt):
 
 
     if first_attempt == "wait":
-        door_list = ["room 1", "room 2", "room 3", "room 4"]
         time.sleep(2)
         print("After a few moments, three, slim, masekd men step through the threshold into the room and face you...")
         time.sleep(1)
@@ -335,12 +336,12 @@ def doors(door_list, choose_door):
             time.sleep(1)
             print(door)
         time.sleep(2)
-        choose_door = input("Which door do you choose to escape through?:\n")
+        choose_doors = input("Which door do you choose to escape through?:\n")
         os.system('cls')
-        door_choices(choose_door)
+        door_choices(choose_doors)
 
-def door_choices(choose_door):
-    if choose_door == "room 1":
+def door_choices(choose_doors):
+    if choose_doors == "room 1":
         time.sleep(2)
         print("You open the door quickly and then slam it shut behind you, but you were too hasty, the bar on the outside falls and locks you inside...")
         time.sleep(2)
@@ -424,7 +425,7 @@ def door_choices(choose_door):
             time.sleep(3)
             sys.exit()
     
-    if choose_door == "room 2":
+    if choose_doors == "room 2":
         time.sleep(2)
         print("You open the door quickly and then slam it shut behind you, but you were too hasty, the bar on the outside falls and locks you inside...")
         time.sleep(2)
@@ -531,7 +532,7 @@ def door_choices(choose_door):
             time.sleep(1)
             sys.exit()
 
-    if choose_door == "room 3":
+    if choose_doors == "room 3":
         time.sleep(2)
         print("You quickly open the door and run into the room, but you painfully tumble down what feels like stairs that you just discovered. You were too hasty.")
         time.sleep(2)
@@ -541,7 +542,7 @@ def door_choices(choose_door):
         time.sleep(2) 
         sys.exit()
     
-    if choose_door == "room 4":
+    if choose_doors == "room 4":
         time.sleep(2)
         print("You quickly open the door and run into the room, but you painfully tumble down what feels like stairs that you just discovered. You were too hasty.")
         time.sleep(2)
